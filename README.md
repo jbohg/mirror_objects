@@ -93,3 +93,6 @@ The reconstructed completed point clouds based on the estimated symmetry plane o
 below with the original partial point cloud in blue and the mirrored one in red.
 ![](demo/topscreen.png?raw=true)
 ![](demo/sidescreen.png?raw=true)
+
+The complete dataset that was used in the above mentioned publication can be downloaded from  
+[here]( http://www-amd.is.tuebingen.mpg.de/~bohg/MirrorDatabase.tgz)
