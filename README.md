@@ -35,6 +35,7 @@ make -j
 
 Usage
 ------------
+Currently, the code assumes as input point clouds in millimeters and in a coordinate frame aligned with the supporting surface.
 
 Estimate full object shape.
 ```
