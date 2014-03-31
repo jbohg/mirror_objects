@@ -1,0 +1,18 @@
+<package>
+  <description brief="Mirror Objects">
+    This package takes as an input a segmented point cloud and the 
+    current viewpoint of the camera and creates a complete point cloud in 
+    which the occluded object backside is filled in. Additionally, a 
+    watertight mesh of this completed point cloud can be created.
+  </description>
+  <author>Jeannette Bohg</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>https://github.com/jbohg/mirror_objects</url>
+
+  <depend package="opencv2"/>
+  <depend package="pcl_ros"/>
+
+</package>
+
+
