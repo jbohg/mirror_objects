@@ -526,7 +526,15 @@ void dumpPCD(const char* name, sensor_msgs::PointCloud2 &result)
   
     pcl::PCDWriter writer;
     pcl::PCLPointCloud2 result_tmp;
-    pcl_conversions::copyPointCloud2MetaData(result, result_tmp);
+#if 1
+    std::cout << "[DEBUG] Pointcloud size before copying: ";
+    std::cout << result.data.size()  << std::endl;
+#endif
+    pcl_conversions::toPCL(result, result_tmp);
+#if 1
+    std::cout << "[DEBUG] Pointcloud size after copying: ";
+    std::cout << result_tmp.data.size()  << std::endl;
+#endif
     writer.writeBinary(name, result_tmp);
 
     // std::cout << "Min and max of plausability " << min << " " << max << std::endl;

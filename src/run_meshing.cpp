@@ -161,7 +161,7 @@ bool parseParameters(int argc, char**argv){
           cloud_tmp, origin, orientation, version) < 0)
 	return false;
 
-    pcl_conversions::copyPCLPointCloud2MetaData(cloud_tmp,cloud);
+    pcl_conversions::fromPCL(cloud_tmp,cloud);
 
     sensor_msgs::PointCloud2::ConstPtr point_cloud_ptr = 
 	boost::make_shared<const sensor_msgs::PointCloud2> (cloud);
