@@ -30,6 +30,11 @@ DAMAGE.
 #include <math.h>
 #include <algorithm>
 
+#include <string.h>
+#include <cstring>
+
+#include "Factor.h"
+
 ////////////////
 // Polynomial //
 ////////////////

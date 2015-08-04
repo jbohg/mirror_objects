@@ -47,6 +47,9 @@
 #include <pcl/io/pcd_io.h>
 #include <sensor_msgs/PointCloud2.h>
 
+#include <pcl/PCLPointCloud2.h>
+#include <pcl_conversions/pcl_conversions.h>
+
 #define BUFSIZE 8096
 #define VOXSIZE 10
 #define MINPTS 90
@@ -522,7 +525,10 @@ void dumpPCD(const char* name, sensor_msgs::PointCloud2 &result)
     }
   
     pcl::PCDWriter writer;
-    writer.writeBinary(name, result);
+    pcl::PCLPointCloud2 result_tmp;
+    pcl_conversions::toPCL(result, result_tmp);
+
+    writer.writeBinary(name, result_tmp);
 
     // std::cout << "Min and max of plausability " << min << " " << max << std::endl;
 

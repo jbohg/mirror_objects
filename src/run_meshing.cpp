@@ -48,6 +48,9 @@
 //#include <terminal_tools/parse.h>
 #include <pcl/io/pcd_io.h>
 
+#include <pcl/PCLPointCloud2.h>
+#include <pcl_conversions/pcl_conversions.h>
+
 #define BUFSIZE 8096
 #define VOXSIZE 10
 #define MINPTS 90
@@ -151,10 +154,14 @@ bool parseParameters(int argc, char**argv){
     int version;
     std::stringstream cloud_name;
 
+    pcl::PCLPointCloud2 cloud_tmp;
+
     ROS_INFO("Reading pcd file %s\n", argv[p_file_indices.at(0)]);
-    if (pcd.read (argv[p_file_indices.at(0)], 
-		  cloud, origin, orientation, version) < 0)
+    if (pcd.read (std::string(argv[p_file_indices.at(0)]),
+          cloud_tmp, origin, orientation, version) < 0)
 	return false;
+
+    pcl_conversions::fromPCL(cloud_tmp,cloud);
 
     sensor_msgs::PointCloud2::ConstPtr point_cloud_ptr = 
 	boost::make_shared<const sensor_msgs::PointCloud2> (cloud);
