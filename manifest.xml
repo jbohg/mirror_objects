@@ -10,7 +10,7 @@
   <review status="unreviewed" notes=""/>
   <url>https://github.com/jbohg/mirror_objects</url>
 
-  <depend package="opencv2"/>
+  <!--depend package="opencv2"/-->
   <depend package="pcl_ros"/>
 
 </package>
