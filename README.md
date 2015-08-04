@@ -1,5 +1,3 @@
-Ported to ros indigo under gcc 4.8.2
-
 Completing object shape by mirroring
 ==============
 
