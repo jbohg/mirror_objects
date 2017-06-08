@@ -96,4 +96,4 @@ below with the original partial point cloud in blue and the mirrored one in red.
 ![](demo/sidescreen.png?raw=true)
 
 The complete dataset that was used in the above mentioned publication can be downloaded from  
-[here]( http://www-amd.is.tuebingen.mpg.de/~bohg/MirrorDatabase.tgz)
+[here]( http://mirror_objects.is.tuebingen.mpg.de/MirrorDatabase.tgz)
